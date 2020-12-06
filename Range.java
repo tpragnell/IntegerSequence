@@ -1,4 +1,5 @@
 import java.util.NoSuchElementException;
+
 public class Range implements IntegerSequence{
 
   private int start;
@@ -28,7 +29,9 @@ public class Range implements IntegerSequence{
   //@throws NoSuchElementException when hasNext() is false.
   //This will return the current value, it will also increase current value by 1.
   //e.g.  if current is 5. This will make current 6, and return 5.
-  public int next(){
+  public int next() throws NoSuchElementException{
+    if(!hasNext())
+      throw new NoSuchElementException();
     int i = current;
     current++;
     return i;
