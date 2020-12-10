@@ -18,12 +18,12 @@ public class Range implements IntegerSequence{
     current = start;
   }
   public int length(){
-    return(end - start);
+    return(end - start +1);
   }
 
   //When current is no longer a valid element in the range, it should return false.
   public boolean hasNext(){
-    return((current >= end)? false : true);
+    return((current > end)? false : true);
   }
 
   //@throws NoSuchElementException when hasNext() is false.
