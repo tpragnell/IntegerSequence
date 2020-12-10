@@ -15,7 +15,6 @@ public class ArraySequence implements IntegerSequence{
 
   public ArraySequence(IntegerSequence _otherseq){
     this.data = new int[_otherseq.length()];
-    System.out.println(_otherseq.length());
     int i = 0;
     while(_otherseq.hasNext()){
       data[i] = _otherseq.next();
